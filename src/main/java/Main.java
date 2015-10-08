@@ -7,7 +7,9 @@ public class Main {
 
     public static void main(String[] args){
 
-        new WebServer().configure(routes -> routes.get("/", "Hello SpareTimeTeaching")).start();
+        new WebServer().configure(routes -> routes
+                .get("/", "Hello SpareTimeTeaching")
+                .get("/pokepoke", "This could be real fun!")).start();
 
     }
 }
