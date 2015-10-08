@@ -1,7 +1,7 @@
 import net.codestory.http.WebServer;
 
 /**
- * Created by mark on 10/8/15.
+ * Main access point for the webserver
  */
 public class Main {
 
