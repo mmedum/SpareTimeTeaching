@@ -1,4 +1,6 @@
-FROM java:8
+FROM java:openjdk-8-jdk
+
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
 # Install maven
 RUN apt-get update  
