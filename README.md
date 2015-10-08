@@ -1,2 +1,2 @@
-# SpareTimeTeaching
+# WorksOnMyMachine
 Projects for SpareTimeTeaching
