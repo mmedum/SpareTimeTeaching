@@ -1,5 +1,4 @@
-FROM java:openjdk-8-jdk
-
+FROM jamesdbloom/docker-java8-maven
 
 # Install maven
 RUN apt-get update  
@@ -10,18 +9,17 @@ RUN git clone https://github.com/mmedum/WorksOnMyMachine /code
 
 WORKDIR /code
 
-
 # Prepare by downloading dependencies
-RUN ["mvn", "dependency:resolve"]  
+CMD ["mvn", "dependency:resolve"]  
 RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat jar
 RUN ["mvn", "package"]
 
+RUN ["java", "-version"]
 
 RUN ["cp", "/code/target/WorksOnMyMachine-0.1-SNAPSHOT-jar-with-dependencies.jar", "/WorksOnMyMachine-0.1-SNAPSHOT-jar-with-dependencies.jar"]
 
 ENTRYPOINT ["java", "-jar", "/WorksOnMyMachine-0.1-SNAPSHOT-jar-with-dependencies.jar"]
 
 EXPOSE 8080
-
