@@ -20,8 +20,9 @@ RUN ["mvn", "verify"]
 ADD src /code/src  
 RUN ["mvn", "package"]
 
+ADD target/WorksOnMyMachine-0.1-SNAPSHOT-jar-with-dependencies.jar /WorksOnMyMachine-0.1-SNAPSHOT-jar-with-dependencies.jar
+ENTRYPOINT ["java", "-jar", "/WorksOnMyMachine-0.1-SNAPSHOT-jar-with-dependencies.jar"]
+
 
 EXPOSE 8080
-ADD WorksOnMyMachine-0.1-SNAPSHOT-jar-with-dependencies.jar /WorksOnMyMachine-0.1-SNAPSHOT-jar-with-dependencies.jar
-ENTRYPOINT ["java", "-jar", "/WorksOnMyMachine-0.1-SNAPSHOT-jar-with-dependencies.jar"]
 
