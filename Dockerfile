@@ -1,6 +1,6 @@
 FROM java:openjdk-8-jdk
 
-ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk
 
 # Install maven
 RUN apt-get update  
