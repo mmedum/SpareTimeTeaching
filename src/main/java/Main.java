@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args){
 
-        new WebServer().configure(routes -> routes.get("/", "Hello World")).start();
+        new WebServer().configure(routes -> routes.get("/", "Hello SpareTimeTeaching")).start();
 
     }
 }
