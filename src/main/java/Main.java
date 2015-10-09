@@ -9,7 +9,11 @@ public class Main {
 
         new WebServer().configure(routes -> routes
                 .get("/", "Hello SpareTimeTeaching")
-                .get("/pokepoke", "This could be real fun!")).start();
+                .get("/pokepoke", "This could be real fun!")
+                .get("/pokepokepoke", "This is really nice")).start();
+
+        //This is a commentd
+
 
     }
 }
